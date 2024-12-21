@@ -27,6 +27,10 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.get('/dummy', (req, res)=> {
+  res.send("route is working");
+});
+
 const emailToSocketMap = new Map();
 const socketidToEmailMap = new Map();
 
